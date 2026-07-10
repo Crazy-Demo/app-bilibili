@@ -22,20 +22,20 @@ export function usePlayer() {
           videoApi.getComments(bvid, 1),
           videoApi.getRelated(bvid),
         ])
-      detail.value = detailData.data || (detailData as any)
-      comments.value = (commentData.data?.comments || (commentData as any)?.comments || [])
-      related.value = (relatedData.data?.videos || (relatedData as any)?.videos || [])
-      const url = (playData.data?.url || (playData as any)?.url || '')
+      detail.value = detailData as any
+      comments.value = commentData.comments || []
+      related.value = relatedData.videos || []
+      const url = playData?.url || ''
 
       if (containerRef.value) {
         player.value = new ArtPlayer({
-          container: containerRef.value, url, autoPlay: true, muted: false,
+          container: containerRef.value, url, autoplay: true, muted: false,
           autoMini: true, autoSize: true, playbackRate: true, aspectRatio: true,
           setting: true, hotkey: true, pip: true, mutex: true,
           fullscreen: true, fullscreenWeb: true,
           danmuku: { id: bvid, api: '/api/video/' + bvid + '/danmaku' },
           theme: '#FB7299',
-        })
+        } as any)
       }
     } catch (err) { error.value = '加载失败，请重试' }
     finally { loading.value = false }

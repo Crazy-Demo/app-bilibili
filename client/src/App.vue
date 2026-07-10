@@ -1,7 +1,7 @@
 <template>
   <ErrorBoundary>
     <router-view v-slot="{ Component, route }">
-      <transition :name="route.meta.transition || 'slide-right'" mode="out-in">
+      <transition :name="(route.meta as any).transition || 'slide-right'" mode="out-in">
         <component :is="Component" />
       </transition>
     </router-view>

@@ -117,7 +117,7 @@ onMounted(async () => {
   loading.value = true
   try {
     const { data } = await videoApi.getDetail(bvid)
-    detail.value = data.data || (data as any)
+    detail.value = data
   } catch {
     showToast('加载失败')
   } finally {

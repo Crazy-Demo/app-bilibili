@@ -4,7 +4,7 @@
       <van-field v-model="username" name="username" label="用户名" placeholder="请输入用户名"
         :rules="[{ required: true, message: '请输入用户名' }]" />
       <van-field v-model="password" type="password" name="password" label="密码" placeholder="请输入密码"
-        :rules="[{ required: true, message: '请输入密码' }, { min: 6, message: '密码至少6位' }]" />
+        :rules="[{ required: true, message: '请输入密码' }, { min: 6, message: '密码至少6位' } as any]" />
     </van-cell-group>
     <div style="margin: 16px">
       <van-button round block type="primary" native-type="submit" :loading="loading">登录</van-button>

@@ -53,7 +53,7 @@ const fontSize = useStorage('settings-font-size', '标准')
 
 const cacheSize = computed(() => '0.0 B')
 
-function onSelect(key: string) {
+function onSelect(_key: string) {
   // Placeholder for future picker dialog
   showToast('功能开发中')
 }

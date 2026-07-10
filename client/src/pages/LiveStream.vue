@@ -98,11 +98,7 @@
 <script setup lang="ts">
 import { ref, onMounted, nextTick, watch } from 'vue'
 import { showToast } from 'vant'
-import { useRoute } from 'vue-router'
 
-const route = useRoute()
-
-const roomId = ref(route.params.roomId as string)
 const viewerCount = ref(128369)
 const isFollowed = ref(false)
 const inputText = ref('')

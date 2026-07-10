@@ -11,6 +11,9 @@
     "test:watch": "vitest"
   },
   "dependencies": {
+    "@capacitor/android": "^8.4.1",
+    "@capacitor/cli": "^8.4.1",
+    "@capacitor/core": "^8.4.1",
     "@vueuse/core": "^14.3.0",
     "artplayer": "^5.4.0",
     "axios": "^1.18.1",

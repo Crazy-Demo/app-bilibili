@@ -163,8 +163,8 @@ import RecommendedVideo from '../components/player/RecommendedVideo.vue'
 const route = useRoute()
 const router = useRouter()
 
-const player = usePlayer()
-const dm = useDanmaku(player.player)
+const { containerRef: _containerRef, detail, comments, related, loading, error, loadAndPlay, destroy, player: artPlayer } = usePlayer()
+const dm = useDanmaku(artPlayer)
 const history = useHistoryStore()
 
 const shareSheetVisible = ref(false)
@@ -183,28 +183,28 @@ function onDanmakuSettingsUpdate(settings: { opacity: number; fontSize: string; 
 
 function retryLoad() {
   const bvid = route.params.bvid as string
-  if (bvid) player.loadAndPlay(bvid)
+  if (bvid) loadAndPlay(bvid)
 }
 
 onMounted(() => {
   const bvid = route.params.bvid as string
   if (bvid) {
-    player.loadAndPlay(bvid)
+    loadAndPlay(bvid)
   }
 })
 
-watch(() => player.detail.value, (detail) => {
-  if (detail) {
+watch(() => detail.value, (d) => {
+  if (d) {
     history.addPlayback({
-      bvid: detail.bvid,
-      title: detail.title,
-      cover: detail.cover,
+      bvid: d.bvid,
+      title: d.title,
+      cover: d.cover,
     })
   }
 })
 
 onBeforeUnmount(() => {
-  player.destroy()
+  destroy()
 })
 
 // Actions

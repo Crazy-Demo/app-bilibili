@@ -37,7 +37,7 @@
 
     <!-- Nested replies -->
     <div class="replies-list" ref="repliesRef">
-      <template v-for="(reply, index) in replies" :key="reply.rpid">
+      <template v-for="reply in replies" :key="reply.rpid">
         <div
           class="comment-item"
           :class="{ 'reply-item': true, 'reply-new': reply.isNew }"
@@ -100,7 +100,6 @@ dayjs.extend(relativeTime)
 dayjs.locale('zh-cn')
 
 const route = useRoute()
-const bvid = route.params.bvid as string
 const rpid = route.params.rpid as string
 
 // --- Mock parent comment ---

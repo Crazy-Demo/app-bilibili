@@ -149,13 +149,13 @@ async function loadAndPlay(bvid: string) {
   error.value = null
   try {
     const { data: playData } = await videoApi.getPlayUrl(bvid)
-    const url = (playData.data?.url || (playData as any)?.url || '')
+    const url = (playData?.url || '')
 
     if (containerRef.value) {
       player.value = new ArtPlayer({
         container: containerRef.value,
         url,
-        autoPlay: true,
+        autoplay: true,
         muted: false,
         autoSize: true,
         fullscreen: true,
