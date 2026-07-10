@@ -28,13 +28,34 @@ const routes = [
     meta: { transition: 'slide-left', requiresAuth: false },
   },
   {
+    path: '/settings', name: 'settings',
+    component: () => import('../pages/Settings.vue'),
+    meta: { transition: 'slide-left', requiresAuth: false },
+  },
+  {
     path: '/search', name: 'search',
     component: () => import('../pages/Search.vue'),
     meta: { transition: 'slide-left', requiresAuth: false },
   },
   {
+    path: '/dynamic', name: 'dynamic',
+    component: () => import('../pages/Dynamic.vue'),
+    meta: { transition: 'slide-left', requiresAuth: false },
+  },
+  {
     path: '/channel', name: 'channel',
     component: () => import('../pages/Channel.vue'),
+    meta: { transition: 'slide-left', requiresAuth: false },
+  },
+  {
+    path: '/notifications',
+    name: 'notifications',
+    component: () => import('../pages/Notification.vue'),
+    meta: { transition: 'slide-left', requiresAuth: true },
+  },
+  {
+    path: '/mall', name: 'mall',
+    component: () => import('../pages/Mall.vue'),
     meta: { transition: 'slide-left', requiresAuth: false },
   },
   {

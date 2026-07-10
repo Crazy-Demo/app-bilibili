@@ -4,7 +4,7 @@
     <van-cell title="我的收藏" icon="star-o" is-link />
     <van-cell title="观看历史" icon="clock-o" is-link />
     <van-cell title="稍后再看" icon="eye-o" is-link />
-    <van-cell title="设置" icon="setting-o" is-link />
+    <van-cell title="设置" icon="setting-o" is-link @click="$router.push('/settings')" />
   </van-cell-group>
   <div style="margin:16px">
     <van-button round block type="default" @click="handleLogout">退出登录</van-button>
