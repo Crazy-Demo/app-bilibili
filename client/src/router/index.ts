@@ -18,6 +18,16 @@ const routes = [
     meta: { transition: 'slide-left', requiresAuth: false },
   },
   {
+    path: '/video/:bvid/fullscreen', name: 'fullplayer',
+    component: () => import('../pages/FullPlayer.vue'),
+    meta: { transition: 'fade', requiresAuth: false },
+  },
+  {
+    path: '/video/:bvid/desc', name: 'videodesc',
+    component: () => import('../pages/VideoDesc.vue'),
+    meta: { transition: 'slide-left', requiresAuth: false },
+  },
+  {
     path: '/login', name: 'login',
     component: () => import('../pages/Login.vue'),
     meta: { transition: 'slide-left', requiresAuth: false },
@@ -66,6 +76,16 @@ const routes = [
   {
     path: '/mall', name: 'mall',
     component: () => import('../pages/Mall.vue'),
+    meta: { transition: 'slide-left', requiresAuth: false },
+  },
+  {
+    path: '/live/:roomId', name: 'live',
+    component: () => import('../pages/LiveStream.vue'),
+    meta: { transition: 'slide-left', requiresAuth: false },
+  },
+  {
+    path: '/vip', name: 'vip',
+    component: () => import('../pages/VIP.vue'),
     meta: { transition: 'slide-left', requiresAuth: false },
   },
   {
