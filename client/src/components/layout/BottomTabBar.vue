@@ -7,7 +7,7 @@
         <div class="publish-btn"><Plus :size="26" color="#FFFFFF" /></div>
       </template>
     </van-tabbar-item>
-    <van-tabbar-item to="/" icon="shopping-bag">会员购</van-tabbar-item>
+    <van-tabbar-item to="/channel" icon="shopping-bag">会员购</van-tabbar-item>
     <van-tabbar-item to="/profile" icon="user-o">我的</van-tabbar-item>
   </van-tabbar>
 

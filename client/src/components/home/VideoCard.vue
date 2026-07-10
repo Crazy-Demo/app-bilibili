@@ -7,7 +7,7 @@
     <div class="info">
       <h3 class="title">{{ video.title }}</h3>
       <div class="meta">
-        <span class="author">{{ video.author }}</span>
+        <span class="author" @click.stop="$router.push('/user/10001')">{{ video.author }}</span>
         <span class="stat">{{ video.playCount }}</span>
         <span class="stat">{{ video.danmakuCount }}</span>
       </div>

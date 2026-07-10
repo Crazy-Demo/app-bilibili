@@ -23,8 +23,18 @@ const routes = [
     meta: { transition: 'slide-left', requiresAuth: true },
   },
   {
+    path: '/user/:uid', name: 'user',
+    component: () => import('../pages/UPProfile.vue'),
+    meta: { transition: 'slide-left', requiresAuth: false },
+  },
+  {
     path: '/search', name: 'search',
     component: () => import('../pages/Search.vue'),
+    meta: { transition: 'slide-left', requiresAuth: false },
+  },
+  {
+    path: '/channel', name: 'channel',
+    component: () => import('../pages/Channel.vue'),
     meta: { transition: 'slide-left', requiresAuth: false },
   },
   {
