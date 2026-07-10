@@ -13,6 +13,11 @@ const routes = [
     meta: { transition: 'slide-left', requiresAuth: false },
   },
   {
+    path: '/video/:bvid/comment/:rpid', name: 'comment-detail',
+    component: () => import('../pages/CommentDetail.vue'),
+    meta: { transition: 'slide-left', requiresAuth: false },
+  },
+  {
     path: '/login', name: 'login',
     component: () => import('../pages/Login.vue'),
     meta: { transition: 'slide-left', requiresAuth: false },
@@ -51,6 +56,11 @@ const routes = [
     path: '/notifications',
     name: 'notifications',
     component: () => import('../pages/Notification.vue'),
+    meta: { transition: 'slide-left', requiresAuth: true },
+  },
+  {
+    path: '/upload', name: 'upload',
+    component: () => import('../pages/Upload.vue'),
     meta: { transition: 'slide-left', requiresAuth: true },
   },
   {
