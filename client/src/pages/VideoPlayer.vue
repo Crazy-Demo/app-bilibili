@@ -163,7 +163,7 @@ import RecommendedVideo from '../components/player/RecommendedVideo.vue'
 const route = useRoute()
 const router = useRouter()
 
-const { containerRef: _containerRef, detail, comments, related, loading, error, loadAndPlay, destroy, player: artPlayer } = usePlayer()
+const { containerRef, detail, comments, related, loading, error, loadAndPlay, destroy, player: artPlayer } = usePlayer()
 const dm = useDanmaku(artPlayer)
 const history = useHistoryStore()
 
